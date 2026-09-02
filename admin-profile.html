@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin Profile | Finance Advisory</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="admin-profile.css"
+    >
+
+</head>
+
+<body>
+
+<div
+    class="admin-profile-overlay"
+    id="adminProfileOverlay"
+></div>
+
+<header class="admin-profile-topbar">
+
+    <div class="admin-profile-topbar-left">
+
+        <a
+            href="admin-profile.html"
+            class="admin-profile-mobile-logo"
+        >
+            <img
+                src="Assest/BrownLogo.webp"
+                alt="Finance Advisory"
+            >
+        </a>
+
+        <button
+            type="button"
+            class="admin-profile-menu-toggle"
+            id="adminProfileMenuToggle"
+            aria-label="Open dashboard menu"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+
+    <div class="admin-profile-topbar-right">
+
+        <button
+            type="button"
+            class="admin-profile-top-icon"
+            onclick="window.location.href='error.html'"
+            aria-label="Search"
+        >
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+        <button
+            type="button"
+            class="admin-profile-top-icon admin-profile-notification"
+            onclick="window.location.href='error.html'"
+            aria-label="Notifications"
+        >
+            <i class="fa-regular fa-bell"></i>
+            <span></span>
+        </button>
+
+        <div class="admin-profile-top-user">
+
+            <div class="admin-profile-top-avatar">
+
+                <a href="error.html">
+                <i class="fa-solid fa-shield-halved"></i>
+                </a>
+            </div>
+
+            <div class="admin-profile-top-user-text">
+
+                <a href="error.html">
+
+                    <strong id="topbarAdminName">
+                        Admin
+                    </strong>
+
+                    <small>
+                        Finance Administrator
+                    </small>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+<aside
+    class="admin-profile-sidebar"
+    id="adminProfileSidebar"
+>
+
+    <div class="admin-profile-sidebar-brand">
+
+        <a
+            href="admin-profile.html"
+            class="admin-profile-sidebar-logo"
+        >
+            <img
+                src="Assest/BrownLogo.webp"
+                alt="Finance Advisory"
+            >
+        </a>
+
+    </div>
+
+    <div class="admin-profile-card">
+
+        <div class="admin-profile-card-avatar">
+            <a href="error.html">
+            <i class="fa-solid fa-shield-halved"></i>
+            </a>
+        </div>
+
+        <div class="admin-profile-card-info">
+
+            <strong id="sidebarAdminName">
+                Admin
+            </strong>
+
+            <span>
+                Finance Administrator
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="admin-profile-sidebar-heading">
+        ADMINISTRATION
+    </div>
+
+    <nav class="admin-profile-navigation">
+
+        <a
+            href="admin-dashboard.html"
+            class="admin-profile-nav-link"
+        >
+
+            <span class="admin-profile-nav-icon">
+                <i class="fa-solid fa-grid-2"></i>
+            </span>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+        <a
+            href="client-management.html"
+            class="admin-profile-nav-link"
+        >
+
+            <span class="admin-profile-nav-icon">
+                <i class="fa-solid fa-users"></i>
+            </span>
+
+            <span>
+                Client Management
+            </span>
+
+        </a>
+
+        <a
+            href="advisory-activity.html"
+            class="admin-profile-nav-link"
+        >
+
+            <span class="admin-profile-nav-icon">
+                <i class="fa-solid fa-chart-line"></i>
+            </span>
+
+            <span>
+                Advisory Activity
+            </span>
+
+        </a>
+
+    </nav>
+
+    <div class="admin-profile-sidebar-heading admin-profile-account-heading">
+        ACCOUNT
+    </div>
+
+    <nav class="admin-profile-navigation">
+
+        <a
+            href="admin-profile.html"
+            class="admin-profile-nav-link active"
+        >
+
+            <span class="admin-profile-nav-icon">
+                <i class="fa-solid fa-user-gear"></i>
+            </span>
+
+            <span>
+                My Profile
+            </span>
+
+        </a>
+
+    </nav>
+
+    <div class="admin-profile-sidebar-footer">
+
+        <button
+            type="button"
+            class="admin-profile-logout"
+            id="adminProfileLogout"
+        >
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            <span>
+                Logout
+            </span>
+
+        </button>
+
+    </div>
+
+</aside>
+
+<main class="admin-profile-main">
+
+    <div class="container-fluid admin-profile-container">
+
+        <section class="admin-profile-page-header">
+
+            <div>
+
+                <span class="admin-profile-eyebrow">
+                    ADMIN ACCOUNT
+                </span>
+
+                <h1>
+                    Your
+                    <span>administrator profile.</span>
+                </h1>
+
+                <p>
+                    Manage your administrator identity, account
+                    details and access information for the Finance
+                    Advisory platform.
+                </p>
+
+            </div>
+
+            <div class="admin-profile-status-badge">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <span>
+                    Administrator Active
+                </span>
+
+            </div>
+
+        </section>
+
+        <section class="admin-profile-hero">
+
+            <div class="admin-profile-hero-left">
+
+                <div class="admin-profile-large-avatar">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+                <div>
+
+                    <span class="admin-profile-member-label">
+                        FINANCE ADVISORY ADMINISTRATOR
+                    </span>
+
+                    <h2 id="profileAdminName">
+                        Admin
+                    </h2>
+
+                    <p id="profileAdminEmail">
+                        admin@example.com
+                    </p>
+
+                    <div class="admin-profile-role-badge">
+
+                        <i class="fa-solid fa-user-shield"></i>
+
+                        <span>
+                            Administrator Account
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="admin-profile-hero-details">
+
+                <div class="admin-profile-id-box">
+
+                    <span>
+                        ROLE
+                    </span>
+
+                    <strong id="profileAdminRole">
+                        Admin
+                    </strong>
+
+                </div>
+
+                <div class="admin-profile-id-box">
+
+                    <span>
+                        ROLE ID
+                    </span>
+
+                    <strong id="profileAdminRoleId">
+                        ADMIN-001
+                    </strong>
+
+                </div>
+
+                <div class="admin-profile-id-box">
+
+                    <span>
+                        STATUS
+                    </span>
+
+                    <strong>
+                        Active
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="row g-4 admin-profile-content">
+
+            <div class="col-xl-8">
+
+                <div class="admin-profile-panel">
+
+                    <div class="admin-profile-panel-header">
+
+                        <div>
+
+                            <span>
+                                ADMINISTRATOR INFORMATION
+                            </span>
+
+                            <h2>
+                                Account Details
+                            </h2>
+
+                        </div>
+
+                        <a
+                            href="error.html"
+                            class="admin-profile-edit"
+                        >
+
+                            <i class="fa-solid fa-pen"></i>
+
+                            EDIT PROFILE
+
+                        </a>
+
+                    </div>
+
+                    <div class="admin-profile-info-grid">
+
+                        <div class="admin-profile-info-item">
+
+                            <div class="admin-profile-info-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    FULL NAME
+                                </span>
+
+                                <strong id="profileFullName">
+                                    Admin
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                        <div class="admin-profile-info-item">
+
+                            <div class="admin-profile-info-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    EMAIL ADDRESS
+                                </span>
+
+                                <strong id="profileEmail">
+                                    admin@example.com
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                        <div class="admin-profile-info-item">
+
+                            <div class="admin-profile-info-icon">
+                                <i class="fa-solid fa-user-shield"></i>
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    ACCOUNT ROLE
+                                </span>
+
+                                <strong id="profileAccountRole">
+                                    Administrator
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                        <div class="admin-profile-info-item">
+
+                            <div class="admin-profile-info-icon">
+                                <i class="fa-solid fa-key"></i>
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    ROLE ID
+                                </span>
+
+                                <strong id="profileRoleId">
+                                    ADMIN-001
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                        <div class="admin-profile-info-item">
+
+                            <div class="admin-profile-info-icon">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    DEPARTMENT
+                                </span>
+
+                                <strong>
+                                    Advisory Operations
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                        <div class="admin-profile-info-item">
+
+                            <div class="admin-profile-info-icon">
+                                <i class="fa-solid fa-bookmark"></i>
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    REMEMBER ME
+                                </span>
+
+                                <strong id="profileRememberStatus">
+                                    Disabled
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="admin-profile-info-footer">
+
+                        <div>
+
+                            <i class="fa-solid fa-circle-info"></i>
+
+                            <p>
+                                Administrator account details are
+                                maintained through the secured account
+                                workflow.
+                            </p>
+
+                        </div>
+
+                        <a
+                            href="error.html"
+                            class="admin-profile-support"
+                        >
+
+                            CONTACT SUPPORT
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-xl-4">
+
+                <div class="admin-profile-security">
+
+                    <span class="admin-profile-security-eyebrow">
+                        ACCESS & SECURITY
+                    </span>
+
+                    <div class="admin-profile-security-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+
+                    <h2>
+                        Administrator access,
+                        protected.
+                    </h2>
+
+                    <p>
+                        Keep your administrator account secure and
+                        review access settings whenever operational
+                        responsibilities change.
+                    </p>
+
+                    <div class="admin-profile-security-row">
+
+                        <div>
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+
+                        <span>
+                            Email authentication
+                        </span>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                    </div>
+
+                    <div class="admin-profile-security-row">
+
+                        <div>
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+
+                        <span>
+                            Account protection
+                        </span>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                    </div>
+
+                    <div class="admin-profile-security-row">
+
+                        <div>
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+
+                        <span>
+                            Admin privileges
+                        </span>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                    </div>
+
+                    <a
+                        href="error.html"
+                        class="admin-profile-security-btn"
+                    >
+
+                        SECURITY SETTINGS
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                    <div class="admin-profile-security-number">
+                        01
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="admin-profile-panel admin-profile-operations">
+
+            <div class="admin-profile-panel-header">
+
+                <div>
+
+                    <span>
+                        ADMINISTRATOR ACCESS
+                    </span>
+
+                    <h2>
+                        Operational Areas
+                    </h2>
+
+                </div>
+
+                <a
+                    href="error.html"
+                    class="admin-profile-edit"
+                >
+
+                    MANAGE ACCESS
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+            <div class="row g-3">
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="admin-profile-access-card">
+
+                        <div class="admin-profile-access-icon">
+
+                            <i class="fa-solid fa-users"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Client Management
+                            </strong>
+
+                            <span>
+                                Review and maintain client relationships
+                            </span>
+
+                        </div>
+
+                        <a
+                            href="client-management.html"
+                            aria-label="Client management"
+                        >
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="admin-profile-access-card">
+
+                        <div class="admin-profile-access-icon">
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Advisory Activity
+                            </strong>
+
+                            <span>
+                                Monitor team and client activity
+                            </span>
+
+                        </div>
+
+                        <a
+                            href="advisory-activity.html"
+                            aria-label="Advisory activity"
+                        >
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="admin-profile-access-card">
+
+                        <div class="admin-profile-access-icon">
+
+                            <i class="fa-solid fa-shield-halved"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Security Center
+                            </strong>
+
+                            <span>
+                                Review account access controls
+                            </span>
+
+                        </div>
+
+                        <a
+                            href="error.html"
+                            aria-label="Security center"
+                        >
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="admin-profile-bottom">
+
+            <div class="admin-profile-bottom-left">
+
+                <div class="admin-profile-bottom-icon">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Protected administrator account
+                    </strong>
+
+                    <p>
+                        Use your administrator access responsibly
+                        when handling client financial information.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <a
+                href="error.html"
+                class="admin-profile-bottom-link"
+            >
+
+                SECURITY CENTER
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </section>
+
+    </div>
+
+</main>
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js">
+</script>
+
+<script src="admin-profile.js"></script>
+
+</body>
+</html>

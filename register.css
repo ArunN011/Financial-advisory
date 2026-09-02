@@ -1,0 +1,1096 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+
+    background: #f4f8f8;
+
+    color: #102f37;
+}
+
+
+
+.finance-register-page {
+    position: relative;
+
+    min-height: 100vh;
+
+    padding:
+        70px 20px
+        50px;
+
+    background:
+        radial-gradient(
+            circle at 12% 40%,
+            rgba(32,140,145,0.08),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 70%,
+            rgba(16,47,55,0.06),
+            transparent 30%
+        ),
+        #f4f8f8;
+
+    overflow: hidden;
+}
+
+.register-bg-circle {
+    position: absolute;
+
+    border:
+        1px solid rgba(
+            32,
+            140,
+            145,
+            0.15
+        );
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.register-bg-circle-one {
+    width: 570px;
+    height: 570px;
+
+    left: -390px;
+    top: -250px;
+}
+
+.register-bg-circle-two {
+    width: 450px;
+    height: 450px;
+
+    right: -300px;
+    bottom: -280px;
+}
+
+
+.register-bg-line {
+    position: absolute;
+
+    width: 180px;
+    height: 1px;
+
+    background:
+        rgba(
+            32,
+            140,
+            145,
+            0.15
+        );
+
+    pointer-events: none;
+
+    transform: rotate(-35deg);
+}
+
+.register-bg-line-one {
+    right: 80px;
+    top: 120px;
+}
+
+
+
+.register-back-home {
+    position: absolute;
+
+    left: 40px;
+    top: 30px;
+
+    z-index: 10;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #102f37;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 800;
+}
+
+.register-back-home i {
+    color: #208c91;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.register-back-home:hover {
+    color: #208c91;
+}
+
+.register-back-home:hover i {
+    transform:
+        translateX(-5px);
+}
+
+.finance-register-card {
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding:
+        48px 50px;
+
+    background: #ffffff;
+
+    border:
+        1px solid #dbe7e7;
+
+    box-shadow:
+        0 30px 80px
+        rgba(
+            16,
+            47,
+            55,
+            0.10
+        );
+
+    overflow: hidden;
+}
+
+
+.finance-register-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: #208c91;
+}
+
+
+.register-brand {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 35px;
+}
+
+
+.register-brand-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #102f37;
+
+    color: #50c8c8;
+
+    font-size: 18px;
+}
+
+
+.register-brand span {
+    display: block;
+
+    color: #208c91;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    line-height: 1;
+}
+
+
+.register-brand strong {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #102f37;
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    line-height: 1;
+}
+
+
+
+.register-header {
+    margin-bottom: 32px;
+}
+
+
+.register-eyebrow {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #208c91;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.register-header h1 {
+    margin: 0 0 13px;
+
+    color: #102f37;
+
+    font-size: 46px;
+
+    font-weight: 800;
+
+    line-height: 1.04;
+
+    letter-spacing: -2px;
+}
+
+
+.register-header h1 span {
+    color: #208c91;
+}
+
+
+.register-header p {
+    max-width: 720px;
+
+    margin: 0;
+
+    color: #748384;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+
+.register-role-label {
+    margin-bottom: 9px;
+
+    color: #102f37;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+}
+
+
+
+.register-role-switch {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 10px;
+
+    margin-bottom: 32px;
+
+    padding: 5px;
+
+    background: #edf4f4;
+
+    border:
+        1px solid #dbe7e7;
+}
+
+
+.register-role {
+    min-height: 54px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #6e7e7f;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.register-role i {
+    font-size: 15px;
+}
+
+
+.register-role.active {
+    background: #102f37;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 7px 20px
+        rgba(
+            16,
+            47,
+            55,
+            0.13
+        );
+}
+
+
+.register-role:not(.active):hover {
+    background: #ffffff;
+
+    color: #208c91;
+}
+
+
+
+.finance-register-form {
+    width: 100%;
+}
+
+
+
+.register-form-group {
+    position: relative;
+}
+
+
+.register-form-group label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #102f37;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    line-height: 1.5;
+}
+
+
+.register-form-group label span {
+    color: #208c91;
+}
+
+
+.register-input-wrapper {
+    position: relative;
+}
+
+
+.register-input-wrapper > i:first-child {
+    position: absolute;
+
+    left: 17px;
+    top: 50%;
+
+    z-index: 2;
+
+    color: #208c91;
+
+    font-size: 15px;
+
+    transform:
+        translateY(-50%);
+
+    pointer-events: none;
+}
+
+
+
+.register-input-wrapper input,
+.register-input-wrapper select {
+    width: 100%;
+
+    height: 55px;
+
+    padding:
+        0 18px
+        0 48px;
+
+    border:
+        1px solid #d7e3e3;
+
+    outline: none;
+
+    background: #f8fbfb;
+
+    color: #102f37;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.register-input-wrapper input::placeholder {
+    color: #98a5a6;
+}
+
+
+.register-input-wrapper input:focus,
+.register-input-wrapper select:focus {
+    border-color: #208c91;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(
+            32,
+            140,
+            145,
+            0.08
+        );
+}
+
+
+
+.register-input-wrapper select {
+    appearance: none;
+
+    padding-right: 45px;
+
+    cursor: pointer;
+}
+
+
+.register-select-arrow {
+    position: absolute !important;
+
+    left: auto !important;
+
+    right: 17px;
+
+    top: 50%;
+
+    color: #718182 !important;
+
+    font-size: 12px !important;
+
+    transform:
+        translateY(-50%) !important;
+}
+
+
+
+.register-password-toggle {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 50px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #8b999a;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+
+.register-password-toggle:hover {
+    color: #208c91;
+}
+
+
+.register-password-strength {
+    display: flex;
+
+    gap: 5px;
+
+    height: 4px;
+
+    margin-top: 8px;
+}
+
+
+.register-password-strength span {
+    flex: 1;
+
+    background: #e3ebeb;
+
+    transition:
+        background 0.3s ease;
+}
+
+
+.register-password-strength.weak
+span:nth-child(1) {
+    background: #c76565;
+}
+
+
+.register-password-strength.medium
+span:nth-child(1),
+.register-password-strength.medium
+span:nth-child(2) {
+    background: #d2a14c;
+}
+
+
+.register-password-strength.strong
+span {
+    background: #208c91;
+}
+
+
+
+.register-password-hint {
+    margin-top: 7px;
+
+    color: #899696;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+.register-error {
+    display: none;
+
+    margin-top: 7px;
+
+    color: #c45454;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+.register-form-group.invalid
+.register-error {
+    display: block;
+}
+
+
+.register-form-group.invalid
+.register-input-wrapper input,
+.register-form-group.invalid
+.register-input-wrapper select {
+    border-color: #c45454;
+
+    background: #fffafa;
+}
+
+
+.register-terms-group {
+    margin-top: 3px;
+}
+
+
+.register-terms {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    cursor: pointer;
+}
+
+
+.register-terms input {
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+.register-checkbox {
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    margin-top: 1px;
+
+    border:
+        1px solid #cedbdb;
+
+    background: #f8fbfb;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.register-terms input:checked
+~ .register-checkbox {
+    background: #208c91;
+
+    border-color: #208c91;
+}
+
+
+.register-terms input:focus-visible
+~ .register-checkbox {
+    outline:
+        2px solid #208c91;
+
+    outline-offset: 3px;
+}
+
+
+.register-checkbox i {
+    opacity: 0;
+}
+
+
+.register-terms input:checked
+~ .register-checkbox i {
+    opacity: 1;
+}
+
+
+.register-terms-text {
+    color: #718182;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+.register-terms-error {
+    display: none;
+
+    margin:
+        8px 0 0
+        34px;
+
+    color: #c45454;
+
+    font-size: 14px;
+}
+
+
+.register-terms-group.invalid
+.register-terms-error {
+    display: block;
+}
+
+
+.register-submit {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding:
+        0 22px;
+
+    border: 0;
+
+    background: #102f37;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.8px;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.register-submit::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+
+    background: #208c91;
+
+    transition:
+        width 0.4s ease;
+}
+
+
+.register-submit span,
+.register-submit i {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.register-submit:hover::before {
+    width: 100%;
+}
+
+
+.register-submit:hover {
+    transform:
+        translateY(-2px);
+}
+
+
+.register-submit i {
+    transition:
+        transform 0.3s ease;
+}
+
+
+.register-submit:hover i {
+    transform:
+        translateX(7px);
+}
+
+
+.register-submit:disabled {
+    opacity: 0.75;
+
+    cursor: wait;
+}
+
+
+.register-login-link {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    margin-top: 28px;
+
+    color: #7b898a;
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+
+.register-login-link a {
+    color: #208c91;
+
+    text-decoration: none;
+
+    font-weight: 800;
+}
+
+
+.register-login-link a:hover {
+    color: #102f37;
+}
+
+
+.register-security {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 22px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid #e2eaea;
+
+    color: #8b999a;
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+
+.register-security i {
+    color: #208c91;
+
+    font-size: 15px;
+}
+
+
+@media (max-width: 991.98px) {
+
+    .finance-register-page {
+        padding:
+            85px 20px 45px;
+    }
+
+
+    .register-back-home {
+        left: 25px;
+        top: 25px;
+    }
+
+
+    .finance-register-card {
+        padding:
+            42px;
+    }
+
+
+    .register-header h1 {
+        font-size: 42px;
+    }
+
+}
+
+
+
+@media (max-width: 767.98px) {
+
+    .finance-register-page {
+        padding:
+            85px 15px 30px;
+    }
+
+
+    .register-back-home {
+        left: 18px;
+        top: 22px;
+
+        font-size: 14px;
+    }
+
+
+    .finance-register-card {
+        padding:
+            32px 22px;
+
+        margin-top: 10px;
+    }
+
+
+    .register-brand {
+        margin-bottom: 28px;
+    }
+
+
+    .register-header {
+        margin-bottom: 25px;
+    }
+
+
+    .register-eyebrow {
+        font-size: 14px;
+    }
+
+
+    .register-header h1 {
+        font-size: 38px;
+
+        letter-spacing: -1.5px;
+    }
+
+
+    .register-header p {
+        font-size: 14px;
+
+        line-height: 1.75;
+    }
+
+
+    .register-role-switch {
+        margin-bottom: 27px;
+    }
+
+
+    .register-role {
+        min-height: 50px;
+
+        font-size: 14px;
+    }
+
+
+    .register-form-group label {
+        font-size: 14px;
+    }
+
+
+    .register-input-wrapper input,
+    .register-input-wrapper select {
+        height: 53px;
+
+        font-size: 14px;
+    }
+
+
+    .register-password-toggle {
+        height: 53px;
+    }
+
+
+    .register-password-hint {
+        font-size: 14px;
+    }
+
+
+    .register-terms-text {
+        font-size: 14px;
+    }
+
+
+    .register-submit {
+        min-height: 55px;
+
+        font-size: 14px;
+    }
+
+
+    .register-login-link {
+        flex-wrap: wrap;
+
+        font-size: 14px;
+    }
+
+
+    .register-security {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+}
+
+
+
+
+@media (max-width: 400px) {
+
+    .finance-register-page {
+        padding:
+            80px 12px 25px;
+    }
+
+
+    .finance-register-card {
+        padding:
+            28px 18px;
+    }
+
+
+    .register-header h1 {
+        font-size: 34px;
+    }
+
+
+    .register-role {
+        font-size: 14px;
+    }
+
+}

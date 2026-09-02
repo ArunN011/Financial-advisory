@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Profile | Finance Advisory</title>
+
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <link
+        rel="stylesheet"
+        href="my-profile.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div
+    class="profile-overlay"
+    id="profileOverlay"
+></div>
+
+
+
+<header class="profile-topbar">
+
+
+    <div class="profile-topbar-left">
+
+
+      
+
+        <a
+            href="my-profile.html"
+            class="profile-mobile-logo"
+        >
+
+            <img
+                src="Assest/BrownLogo.webp"
+                alt="Finance Advisory"
+            >
+
+        </a>
+
+
+
+        <button
+            type="button"
+            class="profile-menu-toggle"
+            id="profileMenuToggle"
+            aria-label="Open dashboard menu"
+            aria-expanded="false"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+    <div class="profile-topbar-right">
+
+
+        <button
+            type="button"
+            class="profile-top-icon"
+            onclick="window.location.href='error.html'"
+            aria-label="Search"
+        >
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+        </button>
+
+
+        <button
+            type="button"
+            class="profile-top-icon profile-notification"
+            onclick="window.location.href='error.html'"
+            aria-label="Notifications"
+        >
+
+            <i class="fa-regular fa-bell"></i>
+
+            <span></span>
+
+        </button>
+
+
+        <div class="profile-top-user">
+
+            <div class="profile-top-user-icon">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+
+            <div class="profile-top-user-text">
+
+                <a href="error.html">
+
+                    <strong id="topbarUserName">
+                        Client
+                    </strong>
+
+                    <small>
+                        Financial Client
+                    </small>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+
+<aside
+    class="profile-sidebar"
+    id="profileSidebar"
+>
+
+
+   
+
+    <div class="profile-sidebar-brand">
+
+        <a
+            href="my-profile.html"
+            class="profile-sidebar-logo"
+        >
+
+            <img
+                src="Assest/BrownLogo.webp"
+                alt="Finance Advisory"
+            >
+
+        </a>
+
+    </div>
+
+
+   
+
+    <div class="profile-client-card">
+
+        <div class="profile-client-avatar">
+
+            <i class="fa-solid fa-user"></i>
+
+        </div>
+
+
+        <div class="profile-client-details">
+
+            <strong id="sidebarUserName">
+                Client
+            </strong>
+
+            <span id="sidebarUserEmail">
+                Financial Client
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="profile-sidebar-heading">
+        MY FINANCES
+    </div>
+
+
+    <nav class="profile-navigation">
+
+
+        <a
+            href="user-dashboard.html"
+            class="profile-nav-link"
+        >
+
+            <span class="profile-nav-icon">
+
+                <i class="fa-solid fa-grid-2"></i>
+
+            </span>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <a
+            href="financial-plan.html"
+            class="profile-nav-link"
+        >
+
+            <span class="profile-nav-icon">
+
+                <i class="fa-solid fa-compass"></i>
+
+            </span>
+
+            <span>
+                Financial Plan
+            </span>
+
+        </a>
+
+
+        <a
+            href="transactions.html"
+            class="profile-nav-link"
+        >
+
+            <span class="profile-nav-icon">
+
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+            </span>
+
+            <span>
+                Transactions
+            </span>
+
+        </a>
+
+    </nav>
+
+
+
+
+    <div class="profile-sidebar-heading profile-account-heading">
+        ACCOUNT
+    </div>
+
+
+    <nav class="profile-navigation">
+
+        <a
+            href="my-profile.html"
+            class="profile-nav-link active"
+        >
+
+            <span class="profile-nav-icon">
+
+                <i class="fa-solid fa-user-gear"></i>
+
+            </span>
+
+            <span>
+                My Profile
+            </span>
+
+        </a>
+
+    </nav>
+
+
+
+    <div class="profile-sidebar-footer">
+
+        <button
+            type="button"
+            class="profile-logout"
+            id="profileLogout"
+        >
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            <span>
+                Logout
+            </span>
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+<main class="profile-main">
+
+
+    <div class="container-fluid profile-container">
+
+
+
+        <section class="profile-page-header">
+
+            <div>
+
+                <span class="profile-eyebrow">
+                    ACCOUNT CENTER
+                </span>
+
+
+                <h1>
+                    My
+                    <span>Profile.</span>
+                </h1>
+
+
+                <p>
+                    Review your account information and manage
+                    the details associated with your Finance
+                    Advisory client profile.
+                </p>
+
+            </div>
+
+
+            <div class="profile-account-badge">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <span>
+                    Active Account
+                </span>
+
+            </div>
+
+        </section>
+
+        <section class="profile-hero-card">
+
+
+            <div class="profile-hero-left">
+
+
+                <div class="profile-large-avatar">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span class="profile-member-label">
+                        FINANCE ADVISORY CLIENT
+                    </span>
+
+
+                    <h2 id="profileDisplayName">
+                        Client
+                    </h2>
+
+
+                    <p id="profileDisplayEmail">
+                        client@example.com
+                    </p>
+
+
+                    <div class="profile-role-badge">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <span id="profileRoleText">
+                            User Account
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-hero-right">
+
+                <div class="profile-id-box">
+
+                    <span>
+                        ROLE ID
+                    </span>
+
+                    <strong id="profileRoleId">
+                        USER-001
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-id-box">
+
+                    <span>
+                        ACCOUNT STATUS
+                    </span>
+
+                    <strong>
+                        Active
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <section class="row g-4 profile-content-row">
+
+
+
+            <div class="col-xl-8">
+
+                <div class="profile-panel">
+
+
+                    <div class="profile-panel-header">
+
+                        <div>
+
+                            <span>
+                                PERSONAL INFORMATION
+                            </span>
+
+                            <h2>
+                                Account Details
+                            </h2>
+
+                        </div>
+
+
+                        <a
+                            href="error.html"
+                            class="profile-edit-link"
+                        >
+
+                            <i class="fa-solid fa-pen"></i>
+
+                            EDIT PROFILE
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="profile-information-grid">
+
+
+                        <div class="profile-information-item">
+
+                            <div class="profile-information-icon">
+
+                                <i class="fa-solid fa-user"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    FULL NAME
+                                </span>
+
+                                <strong id="profileFullName">
+                                    Client
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="profile-information-item">
+
+                            <div class="profile-information-icon">
+
+                                <i class="fa-solid fa-envelope"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    EMAIL ADDRESS
+                                </span>
+
+                                <strong id="profileEmail">
+                                    client@example.com
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="profile-information-item">
+
+                            <div class="profile-information-icon">
+
+                                <i class="fa-solid fa-phone"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    PHONE
+                                </span>
+
+                                <strong>
+                                    Not provided
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="profile-information-item">
+
+                            <div class="profile-information-icon">
+
+                                <i class="fa-solid fa-id-badge"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    ACCOUNT TYPE
+                                </span>
+
+                                <strong id="profileAccountType">
+                                    User Account
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="profile-information-item">
+
+                            <div class="profile-information-icon">
+
+                                <i class="fa-solid fa-key"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    ROLE ID
+                                </span>
+
+                                <strong id="profileInformationRoleId">
+                                    USER-001
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="profile-information-item">
+
+                            <div class="profile-information-icon">
+
+                                <i class="fa-solid fa-bookmark"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    REMEMBER ME
+                                </span>
+
+                                <strong id="profileRememberStatus">
+                                    Disabled
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="profile-info-footer">
+
+                        <div>
+
+                            <i class="fa-solid fa-circle-info"></i>
+
+                            <p>
+                                Some profile information is managed
+                                through your account setup. Contact
+                                the advisory team for changes.
+                            </p>
+
+                        </div>
+
+
+                        <a
+                            href="error.html"
+                            class="profile-contact-link"
+                        >
+
+                            CONTACT SUPPORT
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-xl-4">
+
+                <div class="profile-security-panel">
+
+
+                    <span class="profile-security-eyebrow">
+                        ACCOUNT SECURITY
+                    </span>
+
+
+                    <div class="profile-security-icon">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                    </div>
+
+
+                    <h2>
+                        Keep your
+                        account protected.
+                    </h2>
+
+
+                    <p>
+                        We recommend reviewing your account
+                        information regularly and contacting
+                        the advisory team whenever something
+                        needs to be updated.
+                    </p>
+
+
+                    <div class="profile-security-item">
+
+                        <div>
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                        </div>
+
+                        <span>
+                            Email verified
+                        </span>
+
+                        <i
+                            class="fa-solid fa-circle-check profile-verified"
+                        ></i>
+
+                    </div>
+
+
+                    <div class="profile-security-item">
+
+                        <div>
+
+                            <i class="fa-solid fa-lock"></i>
+
+                        </div>
+
+                        <span>
+                            Login protected
+                        </span>
+
+                        <i
+                            class="fa-solid fa-circle-check profile-verified"
+                        ></i>
+
+                    </div>
+
+
+                    <a
+                        href="error.html"
+                        class="profile-security-button"
+                    >
+
+                        SECURITY SETTINGS
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <div class="profile-security-number">
+                        02
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="profile-panel profile-preferences">
+
+
+            <div class="profile-panel-header">
+
+                <div>
+
+                    <span>
+                        ACCOUNT PREFERENCES
+                    </span>
+
+                    <h2>
+                        Your Advisory Experience
+                    </h2>
+
+                </div>
+
+
+                <a
+                    href="error.html"
+                    class="profile-edit-link"
+                >
+
+                    MANAGE
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="row g-3">
+
+
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="profile-preference-card">
+
+                        <div class="profile-preference-icon">
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Financial Planning
+                            </strong>
+
+                            <span>
+                                Your primary advisory focus
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="error.html"
+                            aria-label="Manage financial planning preference"
+                        >
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="profile-preference-card">
+
+                        <div class="profile-preference-icon">
+
+                            <i class="fa-solid fa-bell"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Notifications
+                            </strong>
+
+                            <span>
+                                Manage account alerts
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="error.html"
+                            aria-label="Manage notifications"
+                        >
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="profile-preference-card">
+
+                        <div class="profile-preference-icon">
+
+                            <i class="fa-solid fa-comments"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Advisor Communication
+                            </strong>
+
+                            <span>
+                                Manage communication preferences
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="error.html"
+                            aria-label="Manage advisor communication"
+                        >
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+        <section class="profile-bottom-strip">
+
+
+            <div class="profile-bottom-left">
+
+                <div class="profile-bottom-icon">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Your account information stays protected.
+                    </strong>
+
+                    <p>
+                        This portal provides an overview of your
+                        account and financial planning information.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="error.html"
+                class="profile-bottom-link"
+            >
+
+                LEARN MORE
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </section>
+
+
+    </div>
+
+</main>
+
+
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js">
+</script>
+
+
+
+<script src="my-profile.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Transactions | Finance Advisory</title>
+
+
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
+
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <link
+        rel="stylesheet"
+        href="transactions.css"
+    >
+
+</head>
+
+
+<body>
+
+
+
+<div
+    class="transaction-overlay"
+    id="transactionOverlay"
+></div>
+
+
+
+<header class="transaction-topbar">
+
+
+    <div class="transaction-topbar-left">
+
+
+        <a
+            href="transactions.html"
+            class="transaction-mobile-logo"
+        >
+
+            <img
+                src="Assest/BrownLogo.webp"
+                alt="Finance Advisory"
+            >
+
+        </a>
+
+
+    
+
+        <button
+            type="button"
+            class="transaction-menu-toggle"
+            id="transactionMenuToggle"
+            aria-label="Open dashboard menu"
+            aria-expanded="false"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+
+
+    <div class="transaction-topbar-right">
+
+
+        <button
+            type="button"
+            class="transaction-top-icon"
+            onclick="window.location.href='error.html'"
+            aria-label="Search"
+        >
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+        </button>
+
+
+        <button
+            type="button"
+            class="transaction-top-icon transaction-notification"
+            onclick="window.location.href='error.html'"
+            aria-label="Notifications"
+        >
+
+            <i class="fa-regular fa-bell"></i>
+
+            <span></span>
+
+        </button>
+
+
+        <div class="transaction-top-user">
+
+            <div class="transaction-top-user-icon">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+
+            <div class="transaction-top-user-text">
+
+                <a href="error.html">
+
+                    <strong id="topbarUserName">
+                        Client
+                    </strong>
+
+                    <small>
+                        Financial Client
+                    </small>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<aside
+    class="transaction-sidebar"
+    id="transactionSidebar"
+>
+
+
+    
+    <div class="transaction-sidebar-brand">
+
+        <a
+            href="transactions.html"
+            class="transaction-sidebar-logo"
+        >
+
+            <img
+                src="Assest/BrownLogo.webp"
+                alt="Finance Advisory"
+            >
+
+        </a>
+
+    </div>
+
+
+    <div class="transaction-client">
+
+        <div class="transaction-client-avatar">
+
+            <i class="fa-solid fa-user"></i>
+
+        </div>
+
+
+        <div class="transaction-client-info">
+
+            <strong id="sidebarUserName">
+                Client
+            </strong>
+
+            <span id="sidebarUserEmail">
+                Financial Client
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="transaction-sidebar-heading">
+        MY FINANCES
+    </div>
+
+
+    <nav class="transaction-navigation">
+
+
+        <a
+            href="user-dashboard.html"
+            class="transaction-nav-link"
+        >
+
+            <span class="transaction-nav-icon">
+
+                <i class="fa-solid fa-grid-2"></i>
+
+            </span>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <a
+            href="financial-plan.html"
+            class="transaction-nav-link"
+        >
+
+            <span class="transaction-nav-icon">
+
+                <i class="fa-solid fa-compass"></i>
+
+            </span>
+
+            <span>
+                Financial Plan
+            </span>
+
+        </a>
+
+
+        <a
+            href="transactions.html"
+            class="transaction-nav-link active"
+        >
+
+            <span class="transaction-nav-icon">
+
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+            </span>
+
+            <span>
+                Transactions
+            </span>
+
+        </a>
+
+    </nav>
+
+ <br>
+
+    <div class="transaction-sidebar-heading transaction-account-heading">
+        ACCOUNT
+    </div>
+
+
+    <nav class="transaction-navigation">
+
+        <a
+            href="my-profile.html"
+            class="transaction-nav-link"
+        >
+
+            <span class="transaction-nav-icon">
+
+                <i class="fa-solid fa-user-gear"></i>
+
+            </span>
+
+            <span>
+                My Profile
+            </span>
+
+        </a>
+
+    </nav>
+
+
+    <div class="transaction-sidebar-footer">
+
+        <button
+            type="button"
+            class="transaction-logout"
+            id="transactionLogout"
+        >
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            <span>
+                Logout
+            </span>
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+<main class="transaction-main">
+
+
+    <div class="container-fluid transaction-container">
+
+
+        <section class="transaction-page-header">
+
+
+            <div>
+
+                <span class="transaction-eyebrow">
+                    TRANSACTION CENTER
+                </span>
+
+
+                <h1>
+                    Track where your
+                    <span>money is moving.</span>
+                </h1>
+
+
+                <p>
+                    Review your recent financial activity,
+                    monitor your inflows and outflows, and
+                    keep your day-to-day finances aligned
+                    with your broader financial plan.
+                </p>
+
+            </div>
+
+
+            <div class="transaction-header-actions">
+
+                <div class="transaction-updated">
+
+                    <i class="fa-regular fa-clock"></i>
+
+                    <span>
+                        Updated today
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="error.html"
+                    class="transaction-export-btn"
+                >
+
+                    <i class="fa-solid fa-download"></i>
+
+                    EXPORT REPORT
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+
+        <section class="transaction-summary">
+
+            <div class="row g-4">
+
+
+                <div class="col-xl-3 col-md-6">
+
+                    <div class="transaction-summary-card">
+
+                        <div class="transaction-summary-top">
+
+                            <div class="transaction-summary-icon inflow-icon">
+
+                                <i class="fa-solid fa-arrow-down"></i>
+
+                            </div>
+
+                            <span>
+                                01
+                            </span>
+
+                        </div>
+
+
+                        <span class="transaction-summary-label">
+                            TOTAL INFLOW
+                        </span>
+
+
+                        <strong>
+                            ₹4,82,500
+                        </strong>
+
+
+                        <div class="transaction-summary-change positive">
+
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+
+                            <span>
+                                +5.8% this month
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-xl-3 col-md-6">
+
+                    <div class="transaction-summary-card">
+
+                        <div class="transaction-summary-top">
+
+                            <div class="transaction-summary-icon outflow-icon">
+
+                                <i class="fa-solid fa-arrow-up"></i>
+
+                            </div>
+
+                            <span>
+                                02
+                            </span>
+
+                        </div>
+
+
+                        <span class="transaction-summary-label">
+                            TOTAL OUTFLOW
+                        </span>
+
+
+                        <strong>
+                            ₹2,74,600
+                        </strong>
+
+
+                        <div class="transaction-summary-change neutral">
+
+                            <i class="fa-solid fa-minus"></i>
+
+                            <span>
+                                Within your plan
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-xl-3 col-md-6">
+
+                    <div class="transaction-summary-card">
+
+                        <div class="transaction-summary-top">
+
+                            <div class="transaction-summary-icon">
+
+                                <i class="fa-solid fa-wallet"></i>
+
+                            </div>
+
+                            <span>
+                                03
+                            </span>
+
+                        </div>
+
+
+                        <span class="transaction-summary-label">
+                            NET CASH FLOW
+                        </span>
+
+
+                        <strong>
+                            ₹2,07,900
+                        </strong>
+
+
+                        <div class="transaction-summary-change positive">
+
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+
+                            <span>
+                                Healthy balance
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-xl-3 col-md-6">
+
+                    <div class="transaction-summary-card">
+
+                        <div class="transaction-summary-top">
+
+                            <div class="transaction-summary-icon">
+
+                                <i class="fa-solid fa-piggy-bank"></i>
+
+                            </div>
+
+                            <span>
+                                04
+                            </span>
+
+                        </div>
+
+
+                        <span class="transaction-summary-label">
+                            SAVING RATE
+                        </span>
+
+
+                        <strong>
+                            43%
+                        </strong>
+
+
+                        <div class="transaction-rate">
+
+                            <div>
+
+                                <span
+                                    style="width:43%"
+                                ></span>
+
+                            </div>
+
+                            <small>
+                                Monthly target: 40%
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <section class="row g-4 transaction-main-grid">
+
+
+
+            <div class="col-xl-8">
+
+                <div class="transaction-panel">
+
+
+                    <div class="transaction-panel-header">
+
+                        <div>
+
+                            <span>
+                                CASH FLOW
+                            </span>
+
+                            <h2>
+                                Monthly Overview
+                            </h2>
+
+                        </div>
+
+
+                        <a
+                            href="error.html"
+                            class="transaction-panel-link"
+                        >
+
+                            VIEW REPORT
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="cashflow-total">
+
+                        <div>
+
+                            <span>
+                                NET MOVEMENT
+                            </span>
+
+                            <strong>
+                                ₹2,07,900
+                            </strong>
+
+                        </div>
+
+
+                        <div class="cashflow-legend">
+
+                            <span>
+
+                                <i class="legend-inflow"></i>
+
+                                Inflow
+
+                            </span>
+
+
+                            <span>
+
+                                <i class="legend-outflow"></i>
+
+                                Outflow
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="cashflow-chart">
+
+
+                        <div class="cashflow-grid">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+
+                        <svg
+                            viewBox="0 0 900 280"
+                            preserveAspectRatio="none"
+                            class="cashflow-svg"
+                        >
+
+                            <path
+                                class="cashflow-fill"
+                                d="
+                                M0,180
+                                C70,165 90,150 155,155
+                                C220,160 235,118 300,130
+                                C365,142 390,100 450,113
+                                C510,126 535,77 600,90
+                                C670,104 690,65 755,74
+                                C820,83 855,45 900,50
+                                L900,280
+                                L0,280
+                                Z
+                                "
+                            ></path>
+
+
+                            <path
+                                class="cashflow-line"
+                                d="
+                                M0,180
+                                C70,165 90,150 155,155
+                                C220,160 235,118 300,130
+                                C365,142 390,100 450,113
+                                C510,126 535,77 600,90
+                                C670,104 690,65 755,74
+                                C820,83 855,45 900,50
+                                "
+                            ></path>
+
+
+                            <path
+                                class="cashflow-outflow"
+                                d="
+                                M0,225
+                                C70,220 100,210 155,215
+                                C210,220 245,175 300,190
+                                C360,205 395,175 450,180
+                                C510,185 545,150 600,164
+                                C660,178 700,142 755,153
+                                C810,164 850,130 900,138
+                                "
+                            ></path>
+
+                        </svg>
+
+
+                        <div class="cashflow-months">
+
+                            <span>Jan</span>
+                            <span>Feb</span>
+                            <span>Mar</span>
+                            <span>Apr</span>
+                            <span>May</span>
+                            <span>Jun</span>
+                            <span>Jul</span>
+                            <span>Aug</span>
+                            <span>Sep</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-xl-4">
+
+                <div class="transaction-panel category-panel">
+
+
+                    <div class="transaction-panel-header">
+
+                        <div>
+
+                            <span>
+                                SPENDING
+                            </span>
+
+                            <h2>
+                                By Category
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="spending-total">
+
+                        <span>
+                            TOTAL THIS MONTH
+                        </span>
+
+                        <strong>
+                            ₹2,74,600
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="spending-item">
+
+                        <div class="spending-icon">
+
+                            <i class="fa-solid fa-house"></i>
+
+                        </div>
+
+
+                        <div class="spending-info">
+
+                            <div>
+
+                                <strong>
+                                    Housing
+                                </strong>
+
+                                <span>
+                                    35%
+                                </span>
+
+                            </div>
+
+
+                            <div class="spending-bar">
+
+                                <span
+                                    style="width:35%"
+                                ></span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="spending-item">
+
+                        <div class="spending-icon">
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </div>
+
+
+                        <div class="spending-info">
+
+                            <div>
+
+                                <strong>
+                                    Lifestyle
+                                </strong>
+
+                                <span>
+                                    24%
+                                </span>
+
+                            </div>
+
+
+                            <div class="spending-bar">
+
+                                <span
+                                    style="width:24%"
+                                ></span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="spending-item">
+
+                        <div class="spending-icon">
+
+                            <i class="fa-solid fa-heart-pulse"></i>
+
+                        </div>
+
+
+                        <div class="spending-info">
+
+                            <div>
+
+                                <strong>
+                                    Health
+                                </strong>
+
+                                <span>
+                                    16%
+                                </span>
+
+                            </div>
+
+
+                            <div class="spending-bar">
+
+                                <span
+                                    style="width:16%"
+                                ></span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="spending-item">
+
+                        <div class="spending-icon">
+
+                            <i class="fa-solid fa-car"></i>
+
+                        </div>
+
+
+                        <div class="spending-info">
+
+                            <div>
+
+                                <strong>
+                                    Transport
+                                </strong>
+
+                                <span>
+                                    13%
+                                </span>
+
+                            </div>
+
+
+                            <div class="spending-bar">
+
+                                <span
+                                    style="width:13%"
+                                ></span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="spending-item">
+
+                        <div class="spending-icon">
+
+                            <i class="fa-solid fa-ellipsis"></i>
+
+                        </div>
+
+
+                        <div class="spending-info">
+
+                            <div>
+
+                                <strong>
+                                    Other
+                                </strong>
+
+                                <span>
+                                    12%
+                                </span>
+
+                            </div>
+
+
+                            <div class="spending-bar">
+
+                                <span
+                                    style="width:12%"
+                                ></span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="transaction-panel transaction-table-panel">
+
+
+            <div class="transaction-panel-header table-heading">
+
+                <div>
+
+                    <span>
+                        TRANSACTION HISTORY
+                    </span>
+
+                    <h2>
+                        Recent Transactions
+                    </h2>
+
+                </div>
+
+
+                <a
+                    href="error.html"
+                    class="transaction-panel-link"
+                >
+
+                    VIEW ALL
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+
+            <div class="transaction-filters">
+
+
+                <div class="transaction-search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="search"
+                        id="transactionSearch"
+                        placeholder="Search transactions..."
+                        aria-label="Search transactions"
+                    >
+
+                </div>
+
+
+                <select
+                    id="transactionCategory"
+                    class="transaction-filter-select"
+                >
+
+                    <option value="all">
+                        All Categories
+                    </option>
+
+                    <option value="income">
+                        Income
+                    </option>
+
+                    <option value="investment">
+                        Investment
+                    </option>
+
+                    <option value="bills">
+                        Bills
+                    </option>
+
+                    <option value="shopping">
+                        Shopping
+                    </option>
+
+                    <option value="transfer">
+                        Transfer
+                    </option>
+
+                </select>
+
+
+                <select
+                    id="transactionType"
+                    class="transaction-filter-select"
+                >
+
+                    <option value="all">
+                        All Types
+                    </option>
+
+                    <option value="credit">
+                        Credit
+                    </option>
+
+                    <option value="debit">
+                        Debit
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <div class="transaction-table-wrapper">
+
+                <table class="transaction-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                TRANSACTION
+                            </th>
+
+                            <th>
+                                DATE
+                            </th>
+
+                            <th>
+                                CATEGORY
+                            </th>
+
+                            <th>
+                                TYPE
+                            </th>
+
+                            <th>
+                                AMOUNT
+                            </th>
+
+                            <th>
+                                STATUS
+                            </th>
+
+                            <th>
+                                ACTION
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="transactionTableBody">
+
+                        <tr
+                            data-category="income"
+                            data-type="credit"
+                        >
+
+                            <td>
+
+                                <div class="transaction-name">
+
+                                    <div class="transaction-row-icon income">
+
+                                        <i class="fa-solid fa-arrow-down"></i>
+
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Monthly Salary
+                                        </strong>
+
+                                        <span>
+                                            Salary Credit
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                Sep 01, 2026
+                            </td>
+
+
+                            <td>
+                                Income
+                            </td>
+
+
+                            <td>
+                                <span class="type-credit">
+                                    Credit
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <strong class="amount-credit">
+                                    +₹1,20,000
+                                </strong>
+                            </td>
+
+
+                            <td>
+                                <span class="transaction-status completed">
+                                    Completed
+                                </span>
+                            </td>
+
+
+                            <td>
+
+                                <a
+                                    href="error.html"
+                                    class="transaction-view"
+                                    aria-label="View salary transaction"
+                                >
+
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                                </a>
+
+                            </td>
+
+                        </tr>
+
+                        <tr
+                            data-category="investment"
+                            data-type="debit"
+                        >
+
+                            <td>
+
+                                <div class="transaction-name">
+
+                                    <div class="transaction-row-icon investment">
+
+                                        <i class="fa-solid fa-chart-line"></i>
+
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Monthly SIP
+                                        </strong>
+
+                                        <span>
+                                            Investment contribution
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                Aug 28, 2026
+                            </td>
+
+
+                            <td>
+                                Investment
+                            </td>
+
+
+                            <td>
+                                <span class="type-debit">
+                                    Debit
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <strong class="amount-debit">
+                                    -₹25,000
+                                </strong>
+                            </td>
+
+
+                            <td>
+                                <span class="transaction-status completed">
+                                    Completed
+                                </span>
+                            </td>
+
+
+                            <td>
+
+                                <a
+                                    href="error.html"
+                                    class="transaction-view"
+                                    aria-label="View investment transaction"
+                                >
+
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                                </a>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr
+                            data-category="bills"
+                            data-type="debit"
+                        >
+
+                            <td>
+
+                                <div class="transaction-name">
+
+                                    <div class="transaction-row-icon bills">
+
+                                        <i class="fa-solid fa-file-invoice"></i>
+
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Utility Bill
+                                        </strong>
+
+                                        <span>
+                                            Electricity payment
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                Aug 25, 2026
+                            </td>
+
+
+                            <td>
+                                Bills
+                            </td>
+
+
+                            <td>
+                                <span class="type-debit">
+                                    Debit
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <strong class="amount-debit">
+                                    -₹4,850
+                                </strong>
+                            </td>
+
+
+                            <td>
+                                <span class="transaction-status completed">
+                                    Completed
+                                </span>
+                            </td>
+
+
+                            <td>
+
+                                <a
+                                    href="error.html"
+                                    class="transaction-view"
+                                    aria-label="View utility transaction"
+                                >
+
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                                </a>
+
+                            </td>
+
+                        </tr>
+
+
+                    
+
+                        <tr
+                            data-category="shopping"
+                            data-type="debit"
+                        >
+
+                            <td>
+
+                                <div class="transaction-name">
+
+                                    <div class="transaction-row-icon shopping">
+
+                                        <i class="fa-solid fa-cart-shopping"></i>
+
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Lifestyle Purchase
+                                        </strong>
+
+                                        <span>
+                                            Card transaction
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                Aug 23, 2026
+                            </td>
+
+
+                            <td>
+                                Shopping
+                            </td>
+
+
+                            <td>
+                                <span class="type-debit">
+                                    Debit
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <strong class="amount-debit">
+                                    -₹7,240
+                                </strong>
+                            </td>
+
+
+                            <td>
+                                <span class="transaction-status completed">
+                                    Completed
+                                </span>
+                            </td>
+
+
+                            <td>
+
+                                <a
+                                    href="error.html"
+                                    class="transaction-view"
+                                    aria-label="View shopping transaction"
+                                >
+
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                                </a>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <tr
+                            data-category="transfer"
+                            data-type="credit"
+                        >
+
+                            <td>
+
+                                <div class="transaction-name">
+
+                                    <div class="transaction-row-icon transfer">
+
+                                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Account Transfer
+                                        </strong>
+
+                                        <span>
+                                            Savings transfer
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                Aug 20, 2026
+                            </td>
+
+
+                            <td>
+                                Transfer
+                            </td>
+
+
+                            <td>
+                                <span class="type-credit">
+                                    Credit
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <strong class="amount-credit">
+                                    +₹35,000
+                                </strong>
+                            </td>
+
+
+                            <td>
+                                <span class="transaction-status completed">
+                                    Completed
+                                </span>
+                            </td>
+
+
+                            <td>
+
+                                <a
+                                    href="error.html"
+                                    class="transaction-view"
+                                    aria-label="View account transfer"
+                                >
+
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                                </a>
+
+                            </td>
+
+                        </tr>
+
+
+                    
+
+                        <tr
+                            data-category="investment"
+                            data-type="debit"
+                        >
+
+                            <td>
+
+                                <div class="transaction-name">
+
+                                    <div class="transaction-row-icon investment">
+
+                                        <i class="fa-solid fa-building-columns"></i>
+
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Mutual Fund
+                                        </strong>
+
+                                        <span>
+                                            Portfolio contribution
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                Aug 18, 2026
+                            </td>
+
+
+                            <td>
+                                Investment
+                            </td>
+
+
+                            <td>
+                                <span class="type-debit">
+                                    Debit
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <strong class="amount-debit">
+                                    -₹15,000
+                                </strong>
+                            </td>
+
+
+                            <td>
+                                <span class="transaction-status pending">
+                                    Processing
+                                </span>
+                            </td>
+
+
+                            <td>
+
+                                <a
+                                    href="error.html"
+                                    class="transaction-view"
+                                    aria-label="View mutual fund transaction"
+                                >
+
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                                </a>
+
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+
+            
+                <div
+                    class="transaction-no-results"
+                    id="transactionNoResults"
+                >
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <strong>
+                        No transactions found
+                    </strong>
+
+                    <p>
+                        Try changing your search or filter.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="transaction-table-footer">
+
+                <span>
+                    Showing recent transactions
+                </span>
+
+
+                <a
+                    href="error.html"
+                    class="transaction-history-link"
+                >
+
+                    FULL TRANSACTION HISTORY
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <section class="transaction-note">
+
+            <div class="transaction-note-icon">
+
+                <i class="fa-solid fa-lightbulb"></i>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Keep your cash flow aligned with your plan.
+                </strong>
+
+                <p>
+                    Reviewing your transaction patterns regularly
+                    can help you understand spending behaviour and
+                    stay focused on your long-term financial goals.
+                </p>
+
+            </div>
+
+
+            <a
+                href="error.html"
+                class="transaction-note-link"
+            >
+
+                VIEW MY PLAN
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </section>
+
+
+    </div>
+
+</main>
+
+
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js">
+</script>
+
+
+
+<script src="transactions.js"></script>
+
+
+</body>
+
+</html>

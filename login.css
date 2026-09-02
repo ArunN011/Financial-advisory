@@ -1,0 +1,1122 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    overflow-x: hidden;
+}
+
+
+body {
+    font-family: "Manrope", sans-serif;
+
+    background: #f4f8f8;
+
+    color: #102f37;
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.finance-login-page {
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    padding:
+        70px
+        20px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 12% 45%,
+            rgba(32,140,145,0.08),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 65%,
+            rgba(16,47,55,0.06),
+            transparent 30%
+        ),
+        #f4f8f8;
+}
+
+
+/* =========================================================
+   BACKGROUND SHAPES
+========================================================= */
+
+.login-bg-shape {
+    position: absolute;
+
+    border: 1px solid rgba(
+        32,
+        140,
+        145,
+        0.15
+    );
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+.login-bg-shape-one {
+    width: 570px;
+    height: 570px;
+
+    left: -390px;
+    top: -220px;
+}
+
+
+.login-bg-shape-two {
+    width: 430px;
+    height: 430px;
+
+    right: -300px;
+    bottom: -250px;
+}
+
+
+.login-bg-line {
+    position: absolute;
+
+    width: 180px;
+    height: 1px;
+
+    background: rgba(
+        32,
+        140,
+        145,
+        0.15
+    );
+
+    transform: rotate(-35deg);
+
+    pointer-events: none;
+}
+
+
+.login-bg-line-one {
+    top: 130px;
+    right: 80px;
+}
+
+
+/* =========================================================
+   BACK HOME
+========================================================= */
+
+.login-back-home {
+    position: absolute;
+
+    top: 35px;
+    left: 45px;
+
+    z-index: 10;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #102f37;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+.login-back-home i {
+    color: #208c91;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.login-back-home:hover {
+    color: #208c91;
+}
+
+
+.login-back-home:hover i {
+    transform:
+        translateX(-5px);
+}
+
+
+/* =========================================================
+   LOGIN CARD
+========================================================= */
+
+.finance-login-card {
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+
+    padding:
+        48px
+        50px;
+
+    background: #ffffff;
+
+    border:
+        1px solid #dce7e7;
+
+    box-shadow:
+        0 30px 80px
+        rgba(
+            16,
+            47,
+            55,
+            0.10
+        );
+
+    overflow: hidden;
+}
+
+
+/* top accent */
+
+.finance-login-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: #208c91;
+
+    transform-origin: left;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.login-brand {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 38px;
+}
+
+
+.login-brand-mark {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #102f37;
+
+    color: #50c8c8;
+
+    font-size: 18px;
+}
+
+
+.login-brand span {
+    display: block;
+
+    color: #208c91;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    line-height: 1;
+}
+
+
+.login-brand strong {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #102f37;
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.login-header {
+    margin-bottom: 30px;
+}
+
+
+.login-eyebrow {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #208c91;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.login-header h1 {
+    margin: 0 0 12px;
+
+    color: #102f37;
+
+    font-size: 46px;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+}
+
+
+.login-header h1 span {
+    color: #208c91;
+}
+
+
+.login-header p {
+    max-width: 560px;
+
+    margin: 0;
+
+    color: #748384;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   ROLE SWITCH
+========================================================= */
+
+.role-switch {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+
+    padding: 5px;
+
+    background: #edf4f4;
+
+    border: 1px solid #dce7e7;
+}
+
+
+.role-button {
+    min-height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #6e7e7f;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.role-button i {
+    font-size: 15px;
+}
+
+
+.role-button.active {
+    background: #102f37;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 8px 20px
+        rgba(
+            16,
+            47,
+            55,
+            0.14
+        );
+}
+
+
+.role-button:not(.active):hover {
+    color: #208c91;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.login-form-group {
+    position: relative;
+
+    margin-bottom: 22px;
+}
+
+
+.login-form-group label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #102f37;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    line-height: 1.5;
+}
+
+
+.login-form-group label span {
+    color: #208c91;
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.login-input-wrap {
+    position: relative;
+}
+
+
+.login-input-icon {
+    position: absolute;
+
+    left: 17px;
+    top: 50%;
+
+    color: #208c91;
+
+    font-size: 15px;
+
+    transform:
+        translateY(-50%);
+
+    pointer-events: none;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+.login-input-wrap input {
+    width: 100%;
+
+    height: 55px;
+
+    padding:
+        0 48px;
+
+    border:
+        1px solid #d7e3e3;
+
+    outline: none;
+
+    background: #f8fbfb;
+
+    color: #102f37;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.login-input-wrap input::placeholder {
+    color: #99a6a6;
+}
+
+
+.login-input-wrap input:focus {
+    border-color: #208c91;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(
+            32,
+            140,
+            145,
+            0.08
+        );
+}
+
+
+.login-input-wrap:focus-within
+.login-input-icon {
+    color: #102f37;
+}
+
+
+/* =========================================================
+   PASSWORD TOGGLE
+========================================================= */
+
+.password-toggle {
+    position: absolute;
+
+    right: 0;
+    top: 0;
+
+    width: 50px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #8b9a9b;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+
+.password-toggle:hover {
+    color: #208c91;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.login-error {
+    display: none;
+
+    margin-top: 7px;
+
+    color: #c45454;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+.login-form-group.invalid
+.login-error {
+    display: block;
+}
+
+
+.login-form-group.invalid
+.login-input-wrap input {
+    border-color: #c45454;
+
+    background: #fffafa;
+}
+
+
+/* =========================================================
+   OPTIONS
+========================================================= */
+
+.login-options {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin:
+        5px 0 25px;
+}
+
+
+/* Remember */
+
+.remember-option {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: #718081;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    user-select: none;
+}
+
+
+.remember-option input {
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+.custom-checkbox {
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid #cddada;
+
+    background: #f7fafa;
+
+    color: #ffffff;
+
+    font-size: 10px;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.remember-option input:checked
+~ .custom-checkbox {
+    background: #208c91;
+
+    border-color: #208c91;
+}
+
+
+.remember-option input:focus-visible
+~ .custom-checkbox {
+    outline:
+        2px solid #208c91;
+
+    outline-offset: 3px;
+}
+
+
+.remember-option .custom-checkbox i {
+    opacity: 0;
+}
+
+
+.remember-option input:checked
+~ .custom-checkbox i {
+    opacity: 1;
+}
+
+
+/* Forgot */
+
+.forgot-password {
+    color: #208c91;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+.forgot-password:hover {
+    color: #102f37;
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+========================================================= */
+
+.login-submit {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 57px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        0 21px;
+
+    border: 0;
+
+    background: #102f37;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.8px;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.login-submit::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 0;
+
+    background: #208c91;
+
+    transition:
+        width 0.4s ease;
+}
+
+
+.login-submit span,
+.login-submit i {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.login-submit:hover::before {
+    width: 100%;
+}
+
+
+.login-submit:hover {
+    transform:
+        translateY(-2px);
+}
+
+
+.login-submit i {
+    transition:
+        transform 0.3s ease;
+}
+
+
+.login-submit:hover i {
+    transform:
+        translateX(7px);
+}
+
+
+.login-submit:disabled {
+    opacity: 0.75;
+
+    cursor: wait;
+}
+
+
+/* =========================================================
+   CREATE ACCOUNT
+========================================================= */
+
+.create-account {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    margin-top: 28px;
+
+    color: #7a8889;
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+
+.create-account a {
+    color: #208c91;
+
+    text-decoration: none;
+
+    font-weight: 800;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+.create-account a:hover {
+    color: #102f37;
+}
+
+
+/* =========================================================
+   SECURITY
+========================================================= */
+
+.login-security {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid #e3ebeb;
+
+    color: #8b999a;
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+
+.login-security i {
+    color: #208c91;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .finance-login-page {
+        padding:
+            90px
+            20px
+            50px;
+    }
+
+
+    .login-back-home {
+        top: 25px;
+        left: 25px;
+    }
+
+
+    .finance-login-card {
+        padding:
+            42px;
+    }
+
+
+    .login-header h1 {
+        font-size: 42px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .finance-login-page {
+        min-height: 100vh;
+
+        align-items: flex-start;
+
+        padding:
+            90px
+            15px
+            30px;
+    }
+
+
+    .login-back-home {
+        top: 23px;
+
+        left: 18px;
+
+        font-size: 14px;
+    }
+
+
+    .login-bg-shape-one {
+        width: 350px;
+        height: 350px;
+
+        left: -260px;
+
+        top: -150px;
+    }
+
+
+    .login-bg-shape-two {
+        width: 260px;
+        height: 260px;
+
+        right: -190px;
+
+        bottom: -160px;
+    }
+
+
+    .finance-login-card {
+        padding:
+            32px 22px;
+    }
+
+
+    .login-brand {
+        margin-bottom: 30px;
+    }
+
+
+    .login-brand-mark {
+        width: 42px;
+        height: 42px;
+    }
+
+
+    .login-header {
+        margin-bottom: 25px;
+    }
+
+
+    .login-eyebrow {
+        font-size: 14px;
+    }
+
+
+    .login-header h1 {
+        font-size: 38px;
+
+        letter-spacing: -1.5px;
+    }
+
+
+    .login-header p {
+        font-size: 14px;
+
+        line-height: 1.75;
+    }
+
+
+    .role-switch {
+        margin-bottom: 25px;
+    }
+
+
+    .role-button {
+        min-height: 49px;
+
+        font-size: 14px;
+    }
+
+
+    .login-form-group {
+        margin-bottom: 20px;
+    }
+
+
+    .login-options {
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+
+        margin-bottom: 23px;
+    }
+
+
+    .remember-option,
+    .forgot-password {
+        font-size: 14px;
+    }
+
+
+    .login-submit {
+        min-height: 55px;
+
+        font-size: 14px;
+    }
+
+
+    .create-account {
+        flex-wrap: wrap;
+
+        font-size: 14px;
+    }
+
+
+    .login-security {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .finance-login-page {
+        padding:
+            85px
+            12px
+            25px;
+    }
+
+
+    .finance-login-card {
+        padding:
+            28px 18px;
+    }
+
+
+    .login-header h1 {
+        font-size: 34px;
+    }
+
+
+    .role-button {
+        font-size: 14px;
+    }
+
+
+    .login-input-wrap input {
+        font-size: 14px;
+    }
+
+}

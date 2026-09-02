@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Financial Plan | Finance Advisory</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="financial-plan.css"
+    >
+
+</head>
+
+
+<body>
+
+<div
+    class="financial-overlay"
+    id="financialOverlay"
+></div>
+
+
+
+
+<header class="financial-topbar">
+
+
+    <div class="financial-topbar-left">
+
+
+
+        <a
+            href="financial-plan.html"
+            class="financial-mobile-logo"
+        >
+
+            <img
+                src="Assest/BrownLogo.webp"
+                alt="Finance Advisory"
+            >
+
+        </a>
+
+
+        <button
+            type="button"
+            class="financial-menu-toggle"
+            id="financialMenuToggle"
+            aria-label="Open dashboard menu"
+            aria-expanded="false"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+    <div class="financial-topbar-right">
+
+
+        <button
+            type="button"
+            class="financial-top-icon"
+            onclick="window.location.href='error.html'"
+            aria-label="Search"
+        >
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+        </button>
+
+
+        <button
+            type="button"
+            class="financial-top-icon notification-icon"
+            onclick="window.location.href='error.html'"
+            aria-label="Notifications"
+        >
+
+            <i class="fa-regular fa-bell"></i>
+
+            <span></span>
+
+        </button>
+
+
+        <div class="financial-top-user">
+
+            <div class="financial-top-user-icon">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+ 
+            <div class="financial-top-user-text">
+
+                <a href="error.html">
+
+                <strong id="topbarUserName">
+                    Client
+                </strong>
+
+                <small>
+                    Financial Client
+                </small>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<aside
+    class="financial-sidebar"
+    id="financialSidebar"
+>
+
+
+
+    <div class="financial-sidebar-brand">
+
+        <a
+            href="financial-plan.html"
+            class="financial-sidebar-logo"
+        >
+
+            <img
+                src="Assest/BrownLogo.webp"
+                alt="Finance Advisory"
+            >
+
+        </a>
+
+    </div>
+
+
+
+    <div class="financial-client">
+
+        <div class="financial-client-avatar">
+
+            <i class="fa-solid fa-user"></i>
+
+        </div>
+
+
+        <div class="financial-client-text">
+
+            <strong id="sidebarUserName">
+                Client
+            </strong>
+
+            <span id="sidebarUserEmail">
+                Financial Client
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="financial-sidebar-heading">
+        MY FINANCES
+    </div>
+
+
+    <nav class="financial-navigation">
+
+
+        <a
+            href="user-dashboard.html"
+            class="financial-nav-link"
+        >
+
+            <span class="financial-nav-icon">
+
+                <i class="fa-solid fa-grid-2"></i>
+
+            </span>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <a
+            href="financial-plan.html"
+            class="financial-nav-link active"
+        >
+
+            <span class="financial-nav-icon">
+
+                <i class="fa-solid fa-compass"></i>
+
+            </span>
+
+            <span>
+                Financial Plan
+            </span>
+
+        </a>
+
+
+        <a
+            href="transactions.html"
+            class="financial-nav-link"
+        >
+
+            <span class="financial-nav-icon">
+
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+            </span>
+
+            <span>
+                Transactions
+            </span>
+
+        </a>
+
+    </nav>
+
+
+
+    <div class="financial-sidebar-heading financial-account-heading">
+        ACCOUNT
+    </div>
+
+
+    <nav class="financial-navigation">
+
+        <a
+            href="my-profile.html"
+            class="financial-nav-link"
+        >
+
+            <span class="financial-nav-icon">
+
+                <i class="fa-solid fa-user-gear"></i>
+
+            </span>
+
+            <span>
+                My Profile
+            </span>
+
+        </a>
+
+    </nav>
+
+
+
+    <div class="financial-sidebar-footer">
+
+        <button
+            type="button"
+            class="financial-logout"
+            id="financialLogout"
+        >
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            <span>
+                Logout
+            </span>
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+
+
+<main class="financial-main">
+
+
+    <div class="container-fluid financial-container">
+
+
+     
+
+        <section class="financial-page-header">
+
+            <div>
+
+                <span class="financial-eyebrow">
+                    FINANCIAL PLAN
+                </span>
+
+
+                <h1>
+                    Your roadmap to
+                    <span>financial confidence.</span>
+                </h1>
+
+
+                <p>
+                    Review your current strategy, track progress
+                    toward your goals and understand the key
+                    priorities that shape your financial journey.
+                </p>
+
+            </div>
+
+
+            <div class="financial-header-actions">
+
+                <div class="financial-last-updated">
+
+                    <i class="fa-regular fa-clock"></i>
+
+                    <span>
+                        Plan updated today
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="error.html"
+                    class="financial-header-button"
+                >
+
+                    <i class="fa-solid fa-download"></i>
+
+                    DOWNLOAD PLAN
+
+                </a>
+
+            </div>
+
+        </section>
+
+        <section class="financial-plan-summary">
+
+            <div class="row g-4">
+
+                <div class="col-xl-4 col-lg-6">
+
+                    <div class="financial-score-card">
+
+                        <div class="score-top">
+
+                            <div>
+
+                                <span>
+                                    FINANCIAL HEALTH
+                                </span>
+
+                                <strong>
+                                    Strong Progress
+                                </strong>
+
+                            </div>
+
+
+                            <div class="score-icon">
+
+                                <i class="fa-solid fa-shield-halved"></i>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="score-number">
+
+                            <strong>
+                                82
+                            </strong>
+
+                            <span>
+                                / 100
+                            </span>
+
+                        </div>
+
+
+                        <div class="score-progress">
+
+                            <span
+                                data-width="82%"
+                            ></span>
+
+                        </div>
+
+
+                        <div class="score-footer">
+
+                            <span>
+                                Good financial position
+                            </span>
+
+                            <a href="error.html">
+
+                                DETAILS
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-xl-4 col-lg-6">
+
+                    <div class="financial-summary-card">
+
+                        <div class="summary-card-icon">
+
+                            <i class="fa-solid fa-wallet"></i>
+
+                        </div>
+
+
+                        <span class="summary-label">
+                            CURRENT NET WORTH
+                        </span>
+
+
+                        <strong class="summary-value">
+                            ₹24.8L
+                        </strong>
+
+
+                        <div class="summary-bottom">
+
+                            <span>
+                                Previous period
+                            </span>
+
+                            <strong>
+                                ₹22.9L
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-xl-4 col-lg-12">
+
+                    <div class="financial-summary-card target-card">
+
+                        <div class="summary-card-icon">
+
+                            <i class="fa-solid fa-bullseye"></i>
+
+                        </div>
+
+
+                        <span class="summary-label">
+                            LONG-TERM TARGET
+                        </span>
+
+
+                        <strong class="summary-value">
+                            ₹50L
+                        </strong>
+
+
+                        <div class="summary-bottom">
+
+                            <span>
+                                Overall progress
+                            </span>
+
+                            <strong class="target-progress-text">
+                                49.6%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="mini-progress">
+
+                            <span
+                                data-width="49.6%"
+                            ></span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="row g-4 financial-main-grid">
+
+
+
+            <div class="col-xl-8">
+
+                <div class="financial-panel goals-panel">
+
+
+                    <div class="financial-panel-header">
+
+                        <div>
+
+                            <span>
+                                YOUR PRIORITIES
+                            </span>
+
+                            <h2>
+                                Financial Goals
+                            </h2>
+
+                        </div>
+
+
+                        <a
+                            href="error.html"
+                            class="financial-panel-link"
+                        >
+
+                            MANAGE GOALS
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                    <div class="financial-goal">
+
+                        <div class="goal-icon">
+
+                            <i class="fa-solid fa-house"></i>
+
+                        </div>
+
+
+                        <div class="goal-main">
+
+                            <div class="goal-heading">
+
+                                <div>
+
+                                    <strong>
+                                        Home Investment
+                                    </strong>
+
+                                    <span>
+                                        Target: ₹15,00,000
+                                    </span>
+
+                                </div>
+
+
+                                <strong class="goal-percent">
+                                    82%
+                                </strong>
+
+                            </div>
+
+
+                            <div class="goal-bar">
+
+                                <span
+                                    data-width="82%"
+                                ></span>
+
+                            </div>
+
+
+                            <div class="goal-values">
+
+                                <span>
+                                    ₹12.3L completed
+                                </span>
+
+                                <span>
+                                    ₹2.7L remaining
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="financial-goal">
+
+                        <div class="goal-icon">
+
+                            <i class="fa-solid fa-umbrella-beach"></i>
+
+                        </div>
+
+
+                        <div class="goal-main">
+
+                            <div class="goal-heading">
+
+                                <div>
+
+                                    <strong>
+                                        Retirement Planning
+                                    </strong>
+
+                                    <span>
+                                        Target: ₹13,50,000
+                                    </span>
+
+                                </div>
+
+
+                                <strong class="goal-percent">
+                                    64%
+                                </strong>
+
+                            </div>
+
+
+                            <div class="goal-bar">
+
+                                <span
+                                    data-width="64%"
+                                ></span>
+
+                            </div>
+
+
+                            <div class="goal-values">
+
+                                <span>
+                                    ₹8.7L completed
+                                </span>
+
+                                <span>
+                                    ₹4.8L remaining
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="financial-goal">
+
+                        <div class="goal-icon">
+
+                            <i class="fa-solid fa-graduation-cap"></i>
+
+                        </div>
+
+
+                        <div class="goal-main">
+
+                            <div class="goal-heading">
+
+                                <div>
+
+                                    <strong>
+                                        Education Fund
+                                    </strong>
+
+                                    <span>
+                                        Target: ₹7,50,000
+                                    </span>
+
+                                </div>
+
+
+                                <strong class="goal-percent">
+                                    48%
+                                </strong>
+
+                            </div>
+
+
+                            <div class="goal-bar">
+
+                                <span
+                                    data-width="48%"
+                                ></span>
+
+                            </div>
+
+
+                            <div class="goal-values">
+
+                                <span>
+                                    ₹3.6L completed
+                                </span>
+
+                                <span>
+                                    ₹3.9L remaining
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="financial-goal">
+
+                        <div class="goal-icon">
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                        </div>
+
+
+                        <div class="goal-main">
+
+                            <div class="goal-heading">
+
+                                <div>
+
+                                    <strong>
+                                        Wealth Growth
+                                    </strong>
+
+                                    <span>
+                                        Target: ₹25,00,000
+                                    </span>
+
+                                </div>
+
+
+                                <strong class="goal-percent">
+                                    69%
+                                </strong>
+
+                            </div>
+
+
+                            <div class="goal-bar">
+
+                                <span
+                                    data-width="69%"
+                                ></span>
+
+                            </div>
+
+
+                            <div class="goal-values">
+
+                                <span>
+                                    ₹17.25L completed
+                                </span>
+
+                                <span>
+                                    ₹7.75L remaining
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="col-xl-4">
+
+                <div class="financial-panel advisor-panel">
+
+
+                    <span class="advisor-eyebrow">
+                        ADVISOR'S NOTE
+                    </span>
+
+
+                    <div class="advisor-quote-icon">
+
+                        <i class="fa-solid fa-quote-left"></i>
+
+                    </div>
+
+
+                    <h2>
+                        You're building
+                        in the right direction.
+                    </h2>
+
+
+                    <p>
+                        Your current savings pattern and investment
+                        discipline are supporting your long-term
+                        objectives. The next priority is maintaining
+                        consistency while reviewing your allocation
+                        as your goals evolve.
+                    </p>
+
+
+                    <div class="advisor-profile">
+
+                        <div class="advisor-avatar">
+
+                            <i class="fa-solid fa-user-tie"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Your Financial Advisor
+                            </strong>
+
+                            <span>
+                                Finance Advisory Team
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        href="error.html"
+                        class="advisor-button"
+                    >
+
+                        MESSAGE ADVISOR
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <div class="advisor-number">
+                        01
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="row g-4 financial-main-grid">
+
+
+
+            <div class="col-lg-7">
+
+                <div class="financial-panel allocation-panel">
+
+
+                    <div class="financial-panel-header">
+
+                        <div>
+
+                            <span>
+                                PORTFOLIO STRUCTURE
+                            </span>
+
+                            <h2>
+                                Investment Allocation
+                            </h2>
+
+                        </div>
+
+
+                        <a
+                            href="error.html"
+                            class="financial-panel-link"
+                        >
+
+                            VIEW PORTFOLIO
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="allocation-content">
+
+
+
+                        <div class="allocation-chart">
+
+                            <div class="allocation-donut">
+
+                                <div class="donut-center">
+
+                                    <strong>
+                                        ₹16.2L
+                                    </strong>
+
+                                    <span>
+                                        Total invested
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="allocation-details">
+
+
+                            <div class="allocation-item">
+
+                                <div>
+
+                                    <span class="allocation-dot equity"></span>
+
+                                    <strong>
+                                        Equity
+                                    </strong>
+
+                                </div>
+
+                                <span>
+                                    45%
+                                </span>
+
+                            </div>
+
+
+                            <div class="allocation-item">
+
+                                <div>
+
+                                    <span class="allocation-dot debt"></span>
+
+                                    <strong>
+                                        Debt
+                                    </strong>
+
+                                </div>
+
+                                <span>
+                                    25%
+                                </span>
+
+                            </div>
+
+
+                            <div class="allocation-item">
+
+                                <div>
+
+                                    <span class="allocation-dot mutual"></span>
+
+                                    <strong>
+                                        Mutual Funds
+                                    </strong>
+
+                                </div>
+
+                                <span>
+                                    20%
+                                </span>
+
+                            </div>
+
+
+                            <div class="allocation-item">
+
+                                <div>
+
+                                    <span class="allocation-dot cash"></span>
+
+                                    <strong>
+                                        Cash
+                                    </strong>
+
+                                </div>
+
+                                <span>
+                                    10%
+                                </span>
+
+                            </div>
+
+
+                            <div class="allocation-note">
+
+                                <i class="fa-solid fa-circle-info"></i>
+
+                                <p>
+                                    Your current allocation is
+                                    aligned with your long-term
+                                    objectives.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-5">
+
+                <div class="financial-panel monthly-panel">
+
+
+                    <div class="financial-panel-header">
+
+                        <div>
+
+                            <span>
+                                MONTHLY STRATEGY
+                            </span>
+
+                            <h2>
+                                Your Contributions
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="monthly-value">
+
+                        <span>
+                            RECOMMENDED MONTHLY SAVING
+                        </span>
+
+                        <strong>
+                            ₹42,000
+                        </strong>
+
+                    </div>
+
+
+                    <div class="monthly-row">
+
+                        <div>
+
+                            <span>
+                                Investments
+                            </span>
+
+                            <strong>
+                                ₹25,000
+                            </strong>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </div>
+
+
+                    <div class="monthly-row">
+
+                        <div>
+
+                            <span>
+                                Emergency Fund
+                            </span>
+
+                            <strong>
+                                ₹10,000
+                            </strong>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </div>
+
+
+                    <div class="monthly-row">
+
+                        <div>
+
+                            <span>
+                                Goal Savings
+                            </span>
+
+                            <strong>
+                                ₹7,000
+                            </strong>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </div>
+
+
+                    <a
+                        href="error.html"
+                        class="monthly-button"
+                    >
+
+                        REVIEW STRATEGY
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="financial-panel milestones-panel">
+
+
+            <div class="financial-panel-header">
+
+                <div>
+
+                    <span>
+                        WHAT'S NEXT
+                    </span>
+
+                    <h2>
+                        Upcoming Milestones
+                    </h2>
+
+                </div>
+
+
+                <a
+                    href="error.html"
+                    class="financial-panel-link"
+                >
+
+                    VIEW ALL
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="milestone-list">
+
+
+             
+
+                <div class="milestone-item">
+
+                    <div class="milestone-number">
+                        01
+                    </div>
+
+
+                    <div class="milestone-icon">
+
+                        <i class="fa-solid fa-calendar-check"></i>
+
+                    </div>
+
+
+                    <div class="milestone-content">
+
+                        <strong>
+                            Financial strategy review
+                        </strong>
+
+                        <span>
+                            Advisor meeting · September 18
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="error.html"
+                        class="milestone-arrow"
+                    >
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+
+                <div class="milestone-item">
+
+                    <div class="milestone-number">
+                        02
+                    </div>
+
+
+                    <div class="milestone-icon">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                    </div>
+
+
+                    <div class="milestone-content">
+
+                        <strong>
+                            Portfolio allocation review
+                        </strong>
+
+                        <span>
+                            Recommended · October
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="error.html"
+                        class="milestone-arrow"
+                    >
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+           
+
+                <div class="milestone-item">
+
+                    <div class="milestone-number">
+                        03
+                    </div>
+
+
+                    <div class="milestone-icon">
+
+                        <i class="fa-solid fa-bullseye"></i>
+
+                    </div>
+
+
+                    <div class="milestone-content">
+
+                        <strong>
+                            Home investment target
+                        </strong>
+
+                        <span>
+                            Expected milestone · December
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="error.html"
+                        class="milestone-arrow"
+                    >
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+
+        <div class="financial-security">
+
+            <div class="financial-security-icon">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Your financial information is protected.
+                </strong>
+
+                <p>
+                    This dashboard provides a planning overview
+                    and does not constitute financial advice.
+                </p>
+
+            </div>
+
+
+            <a
+                href="error.html"
+                class="financial-security-link"
+            >
+
+                LEARN MORE
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</main>
+
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js">
+</script>
+
+
+
+
+<script src="financial-plan.js"></script>
+
+
+</body>
+
+</html>
