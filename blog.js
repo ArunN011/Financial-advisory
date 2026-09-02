@@ -1,6 +1,4 @@
-/* =========================================================
-   BLOG HERO GSAP
-========================================================= */
+
 
 document.addEventListener(
     "DOMContentLoaded",
@@ -70,9 +68,6 @@ document.addEventListener(
             );
 
 
-        /* =================================================
-           INITIAL STATE
-        ================================================= */
 
         gsap.set(
             breadcrumb,
@@ -145,10 +140,7 @@ document.addEventListener(
         );
 
 
-        /* =================================================
-           HERO TIMELINE
-        ================================================= */
-
+     
         const timeline =
             gsap.timeline();
 
@@ -1237,7 +1229,7 @@ document.addEventListener(
         gsap.set(
             eyebrow,
             {
-                opacity: 0,
+                opacity: 1,
                 y: 20
             }
         );
@@ -1246,7 +1238,7 @@ document.addEventListener(
         gsap.set(
             title,
             {
-                opacity: 0,
+                opacity: 1,
                 y: 40
             }
         );
@@ -1263,7 +1255,7 @@ document.addEventListener(
         gsap.set(
             intro,
             {
-                opacity: 0,
+                opacity: 1,
                 y: 25
             }
         );
@@ -1272,7 +1264,7 @@ document.addEventListener(
         gsap.set(
             visibleCards,
             {
-                opacity: 0,
+                opacity: 1,
                 y: 45
             }
         );
@@ -1537,7 +1529,7 @@ if (financeFooter) {
     gsap.set(
         footerMain,
         {
-            opacity: 0,
+            opacity: 1,
             y: 40
         }
     );
@@ -1546,7 +1538,7 @@ if (financeFooter) {
     gsap.set(
         footerInfo,
         {
-            opacity: 0,
+            opacity: 1,
             y: 25
         }
     );
@@ -1564,7 +1556,7 @@ if (financeFooter) {
     gsap.set(
         footerBottom,
         {
-            opacity: 0
+            opacity: 1
         }
     );
 
